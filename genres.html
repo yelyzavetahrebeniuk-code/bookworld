@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWorld – Жанри книг</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        h1.highlight, h2.highlight {
+            color: #2e8b57;
+            text-shadow: 1px 1px 2px #aaa;
+            font-style: italic;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        .menu li {
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu li:hover {
+            background-color: #45a049;
+        }
+
+        .genres-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .genre-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+            color: #2e8b57;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+
+        .genre-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+            background-color: #e0f2f1;
+        }
+
+        .genre-name {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .genre-desc {
+            font-size: 14px;
+            font-weight: normal;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="highlight">Жанри книг</h1>
+
+    <ul class="menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про сайт</a></li>
+        <li><a href="catalog.html">Каталог книг</a></li>
+        <li><a href="authors.html">Автори</a></li>
+        <li><a href="reviews.html">Рецензії</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+
+    <h2 class="highlight">Популярні жанри</h2>
+    <div class="genres-container">
+        <div class="genre-card">
+            <div class="genre-name">Повість</div>
+            <div class="genre-desc">Коротке прозове оповідання з обмеженою кількістю персонажів і подій.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Роман</div>
+            <div class="genre-desc">Великий прозовий твір, який описує життя персонажів та їхні пригоди.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Фентезі</div>
+            <div class="genre-desc">Жанр з магією, вигаданими світами та надприродними істотами.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Антиутопія</div>
+            <div class="genre-desc">Твори про майбутнє суспільство, де панує тиранія, контроль і пригнічення.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Детектив</div>
+            <div class="genre-desc">Історії про розслідування злочинів та розкриття таємниць.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Наукова фантастика</div>
+            <div class="genre-desc">Твори про науку, технології та події у майбутньому.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Поезія</div>
+            <div class="genre-desc">Літературні твори у віршованій формі з ритмом і римою.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Біографія</div>
+            <div class="genre-desc">Життєпис відомих людей, опис їхніх досягнень та подій життя.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Мемуари</div>
+            <div class="genre-desc">Особисті спогади автора про його життя та події, які він пережив.</div>
+        </div>
+        <div class="genre-card">
+            <div class="genre-name">Історичний роман</div>
+            <div class="genre-desc">Прозові твори, засновані на історичних подіях і персонажах.</div>
+        </div>
+    </div>
+
+</body>
+</html>
