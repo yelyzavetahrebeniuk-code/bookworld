@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWorld – Контакти</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        .menu li {
+            margin: 0;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: #45a049;
+        }
+
+        .menu li a.active {
+            background-color: #2e8b57; /* темно-зелена для активної вкладки */
+        }
+
+        .container {
+            border: 2px solid #888;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            max-width: 600px;
+            /* margin: 0 auto; <- прибрали, щоб форма була зліва */
+        }
+
+        input, textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* padding не збільшує ширину */
+        }
+
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+        .highlight {
+            color: #2e8b57;
+            text-shadow: 1px 1px 2px #aaa;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Меню зверху -->
+    <ul class="menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="catalog.html">Каталог книг</a></li>
+        <li><a href="authors.html">Автори</a></li>
+        <li><a href="genres.html">Жанри</a></li>
+        <li><a href="reviews.html">Рецензії</a></li>
+	<li><a href="about.html">Про сайт</a></li>
+        <li><a href="contacts.html" class="active">Контакти</a></li>
+    </ul>
+
+    <div class="container">
+        <h2 class="highlight">Зв’яжіться з нами</h2>
+        <form>
+            <label>Ваше ім'я:</label>
+            <input type="text" name="name" placeholder="Введіть ваше ім'я" required>
+
+            <label>Ваш email:</label>
+            <input type="email" name="email" placeholder="Введіть ваш email" required>
+
+            <label>Повідомлення:</label>
+            <textarea name="msg" rows="5" placeholder="Введіть повідомлення" required></textarea>
+
+            <button type="submit" class="btn-submit">Надіслати</button>
+        </form>
+    </div>
+
+</body>
+</html>

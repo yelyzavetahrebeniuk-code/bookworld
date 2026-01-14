@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWorld – Головна сторінка</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        /* Меню */
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+            display: flex;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: #397d3a;
+        }
+
+        /* Активний пункт меню */
+        .menu li a.active {
+            background-color: #2e8b57; /* темно-зелений */
+        }
+
+        /* Заголовки */
+        .highlight {
+            color: #2e8b57;
+            text-shadow: 1px 1px 2px #aaa;
+            font-style: italic;
+        }
+
+        /* Контейнер */
+        .container {
+            border: 2px solid #888;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        /* Таблиця */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #fdfdfd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .info-table th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .info-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .info-table tr:hover {
+            background-color: #f1f8f4;
+        }
+
+        /* Банер з цитатою */
+        .quote-banner {
+            position: relative;
+            max-width: 350px;
+            margin: 20px 0 30px 0;
+        }
+
+        .quote-banner img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .quote-text {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background-color: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Меню -->
+    <ul class="menu">
+        <li><a href="index.html" class="active">Головна</a></li>
+        <li><a href="catalog.html">Каталог книг</a></li>
+        <li><a href="authors.html">Автори</a></li>
+        <li><a href="genres.html">Жанри</a></li>
+        <li><a href="reviews.html">Рецензії</a></li>
+        <li><a href="about.html">Про сайт</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+
+    <!-- Назва і опис -->
+    <h1 class="highlight">BookWorld – сайт про книги</h1>
+    <p>
+        Вітаємо на нашому сайті, присвяченому літературі!
+        Тут ви знайдете <b>книги</b>, <i>рецензії</i>, біографії авторів та багато іншого.<br>
+        Наш сайт створений для справжніх поціновувачів читання.
+    </p>
+
+    <!-- Таблиця -->
+    <table class="info-table">
+        <tr>
+            <th>Розділ</th>
+            <th>Що містить</th>
+            <th>Кількість</th>
+        </tr>
+        <tr>
+            <td>Каталог книг</td>
+            <td>Повний перелік доступних книг</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td>Автори</td>
+            <td>Біографії письменників</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Жанри</td>
+            <td>Опис основних літературних напрямів</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Рецензії</td>
+            <td>Відгуки та оцінки читачів</td>
+            <td>48</td>
+        </tr>
+    </table>
+
+    <!-- Банер з цитатою -->
+    <h2>Цитата дня</h2>
+
+    <div class="quote-banner">
+        <img src="book.jpg" alt="Книги та читання">
+        <div class="quote-text">
+            «Книга — це дзеркало, у якому відбивається душа читача»
+        </div>
+    </div>
+
+    <!-- Відео -->
+    <h2>Відео (YouTube)</h2>
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/UsR08cY8k0A"
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+
+</body>
+</html>

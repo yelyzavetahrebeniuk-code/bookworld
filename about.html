@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWorld – Про сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        /* Головне меню */
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            background-color: #4CAF50;
+            border-radius: 5px; /* легке закруглення кутів */
+            overflow: hidden;   /* обрізає зайве */
+        }
+
+        .menu li {
+            margin: 0;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .menu li:hover {
+            background-color: #45a049;
+        }
+
+        /* Активна вкладка */
+        .menu li.active {
+            background-color: #2e8b57; /* темно-зелений */
+        }
+
+        .highlight {
+            color: #2e8b57;
+            text-shadow: 1px 1px 2px #aaa;
+            font-style: italic;
+        }
+
+        .container {
+            border: 2px solid #888;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="catalog.html">Каталог книг</a></li>
+        <li><a href="authors.html">Автори</a></li>
+        <li><a href="genres.html">Жанри</a></li>
+        <li><a href="reviews.html">Рецензії</a></li>
+        <li class="active"><a href="about.html">Про сайт</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+
+    <h1 class="highlight">Про сайт BookWorld</h1>
+
+    <div class="container">
+        <h2 class="highlight">Мета сайту</h2>
+        <p>
+            BookWorld створено для всіх, хто любить читати книги та ділитися своїми враженнями.
+            Тут ви знайдете каталог книг різних жанрів, інформацію про авторів,
+            рецензії на популярні твори та актуальні новини літературного світу.
+        </p>
+
+        <h2 class="highlight">Що ви знайдете на сайті</h2>
+        <ul>
+            <li>Каталог книг з можливістю сортування по жанрах та авторам</li>
+            <li>Біографії та цікаві факти про письменників</li>
+            <li>Рецензії та огляди новинок</li>
+            <li>Блог із порадами та статтями про читання</li>
+            <li>Форма зворотного зв’язку для спілкування з адміністрацією</li>
+        </ul>
+    </div>
+
+</body>
+</html>

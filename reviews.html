@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWorld – Рецензії</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .container {
+            border: 2px solid #888;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        .menu li {
+            margin: 0;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .menu li:hover {
+            background-color: #45a049;
+        }
+
+        .menu li:active {
+            background-color: #397d3a;
+        }
+
+        /* Активна вкладка */
+        .menu li.active {
+            background-color: #2e8b57; /* темно-зелений */
+        }
+
+        .highlight {
+            color: #2e8b57;
+            text-shadow: 1px 1px 2px #aaa;
+            font-style: italic;
+        }
+
+        .review {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            background-color: #f9f9f9;
+        }
+
+        .review h3 {
+            margin: 0 0 5px 0;
+        }
+
+        .review p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li><a href="index.html" style="color:white; text-decoration:none;">Головна</a></li>
+        <li><a href="catalog.html" style="color:white; text-decoration:none;">Каталог книг</a></li>
+        <li><a href="authors.html" style="color:white; text-decoration:none;">Автори</a></li>
+        <li><a href="genres.html" style="color:white; text-decoration:none;">Жанри</a></li>
+        <li class="active"><a href="reviews.html" style="color:white; text-decoration:none;">Рецензії</a></li>
+	<li><a href="about.html" style="color:white; text-decoration:none;">Про сайт</a></li>
+        <li><a href="contacts.html" style="color:white; text-decoration:none;">Контакти</a></li>
+    </ul>
+
+    <h1 class="highlight">Рецензії на книги</h1>
+<div class="container">
+    <div class="review">
+        <h3>Тіні забутих предків</h3>
+        <p>Неймовірна українська повість, що показує красу Карпат та глибину людських емоцій. Автор майстерно описує традиції та життя людей.</p>
+    </div>
+
+    <div class="review">
+        <h3>Кобзар</h3>
+        <p>Збірка поезій Тараса Шевченка, яка стала символом української культури та національної свідомості. Пронизлива, чесна і глибока.</p>
+    </div>
+
+    <div class="review">
+        <h3>Лісова пісня</h3>
+        <p>Магічна драма Лесі Українки, що поєднує реальний світ і казкову природу. Глибокі почуття, краса української природи та філософія життя.</p>
+    </div>
+
+    <div class="review">
+        <h3>Маруся</h3>
+        <p>Історичний роман про життя українського народу, його боротьбу та кохання. Автор майстерно передає емоції героїв та дух епохи.</p>
+    </div>
+
+    <div class="review">
+        <h3>Захар Беркут</h3>
+        <p>Епічна повість Івана Франка про боротьбу Карпатського народу проти загарбників. Величезний масштаб подій та сильні персонажі.</p>
+    </div>
+
+    <div class="review">
+        <h3>Сон</h3>
+        <p>Глибока поетична повість, яка досліджує людські страхи та бажання. Символічна, багатошарова та емоційно насичена.</p>
+    </div>
+
+    <div class="review">
+        <h3>Мина Мазайло</h3>
+        <p>Сатирична п’єса Миколи Куліша, що показує абсурдність соціальних та національних конфліктів. Гумор і трагедія переплітаються.</p>
+    </div>
+
+    <div class="review">
+        <h3>Тигролови</h3>
+        <p>Напружений роман про виживання та боротьбу, де герої протистоять жорстокому світу. Екшн, драма та сильні характери.</p>
+    </div>
+
+    <div class="review">
+        <h3>Чорна рада</h3>
+        <p>Історичний роман Пантелеймона Куліша про події козацької доби та боротьбу за владу. Глибокий аналіз людських пристрастей та політики.</p>
+    </div>
+
+    <div class="review">
+        <h3>Кайдашева сім’я</h3>
+        <p>Соціальна драма Івана Нечуя-Левицького про життя селянської родини, конфлікти поколінь і звичаї українського села.</p>
+    </div>
+
+    <div class="review">
+        <h3>Хіба ревуть воли, як ясла повні?</h3>
+        <p>Роман Панаса Мирного та Івана Білика про життя селян, боротьбу за землю та права. Реалістично і глибоко про людські долі.</p>
+    </div>
+
+    <div class="review">
+        <h3>Людина і зброя</h3>
+        <p>Роман Олександра Довженка про війну, мораль та людські переживання. Показує складність вибору та ціну людського життя.</p>
+    </div>
+</div>
+
+
+</body>
+</html>

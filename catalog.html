@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWorld – Каталог книг</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        h1.highlight, h2.highlight {
+            color: #2e8b57;
+            text-shadow: 1px 1px 2px #aaa;
+            font-style: italic;
+        }
+
+        /* Меню */
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        .menu li {
+            margin: 0;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: #397d3a;
+        }
+
+        /* Активний пункт меню */
+        .menu li a.active {
+            background-color: #2e8b57; /* темно-зелений фон */
+        }
+
+        /* Каталог книг */
+        .catalog {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .book-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            width: 200px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 250px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .book-author, .book-genre, .book-year {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Меню -->
+    <ul class="menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="catalog.html" class="active">Каталог книг</a></li>
+        <li><a href="authors.html">Автори</a></li>
+        <li><a href="genres.html">Жанри</a></li>
+        <li><a href="reviews.html">Рецензії</a></li>
+	<li><a href="about.html">Про сайт</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+
+    <h1 class="highlight">Каталог книг</h1>
+
+    <div class="catalog">
+        <!-- Українські книги з обкладинками -->
+        <div class="book-card">
+            <div class="book-cover"><img src="tini-zabutykh-perekiv.jpg" alt="Тіні забутих предків"></div>
+            <div class="book-title">Тіні забутих предків</div>
+            <div class="book-author">Михайло Коцюбинський</div>
+            <div class="book-genre">Повість</div>
+            <div class="book-year">1911</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="kobzar.jpg" alt="Кобзар"></div>
+            <div class="book-title">Кобзар</div>
+            <div class="book-author">Тарас Шевченко</div>
+            <div class="book-genre">Поезія</div>
+            <div class="book-year">1840</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="lisova-pisnia.jpg" alt="Лісова пісня"></div>
+            <div class="book-title">Лісова пісня</div>
+            <div class="book-author">Леся Українка</div>
+            <div class="book-genre">Драма-феєрія</div>
+            <div class="book-year">1911</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="marusia.jpg" alt="Маруся"></div>
+            <div class="book-title">Маруся</div>
+            <div class="book-author">Григорій Квітка-Основ`яненко</div>
+            <div class="book-genre">Повість</div>
+            <div class="book-year">1969</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="zahar-berkut.jpg" alt="Захар Беркут"></div>
+            <div class="book-title">Захар Беркут</div>
+            <div class="book-author">Іван Франко</div>
+            <div class="book-genre">Повість</div>
+            <div class="book-year">1883</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="son.jpg" alt="Сон"></div>
+            <div class="book-title">Сон</div>
+            <div class="book-author">Леся Українка</div>
+            <div class="book-genre">Поезія</div>
+            <div class="book-year">1890</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="mina-mazailo.jpg" alt="Мина Мазайло"></div>
+            <div class="book-title">Мина Мазайло</div>
+            <div class="book-author">Микола Куліш</div>
+            <div class="book-genre">Комедія</div>
+            <div class="book-year">1928</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="tigrolovy.jpg" alt="Тигролови"></div>
+            <div class="book-title">Тигролови</div>
+            <div class="book-author">Іван Багряний</div>
+            <div class="book-genre">Роман</div>
+            <div class="book-year">1944</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="chorna-rada.jpg" alt="Чорна рада"></div>
+            <div class="book-title">Чорна рада</div>
+            <div class="book-author">Пантелеймон Куліш</div>
+            <div class="book-genre">Роман</div>
+            <div class="book-year">1857</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="kaidasheva-simya.jpg" alt="Кайдашева сім’я"></div>
+            <div class="book-title">Кайдашева сім’я</div>
+            <div class="book-author">Іван Нечуй-Левицький</div>
+            <div class="book-genre">Повість</div>
+            <div class="book-year">1879</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="khuba-revut-voly.jpg" alt="Хіба ревуть воли, як ясла повні?"></div>
+            <div class="book-title">Хіба ревуть воли, як ясла повні?</div>
+            <div class="book-author">Панас Мирний</div>
+            <div class="book-genre">Роман</div>
+            <div class="book-year">1880</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="autobiography.jpg" alt="Моя автобіографія"></div>
+            <div class="book-title">Моя автобіографія</div>
+            <div class="book-author">Остап Вишня</div>
+            <div class="book-genre">Автобіографія</div>
+            <div class="book-year">1933</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="maria.jpg" alt="Марія"></div>
+            <div class="book-title">Марія</div>
+            <div class="book-author">Улас Самчук</div>
+            <div class="book-genre">Роман</div>
+            <div class="book-year">1934</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="volodymyr.jpg" alt="Володимир"></div>
+            <div class="book-title">Володимир</div>
+            <div class="book-author">Володимир Винниченко</div>
+            <div class="book-genre">Роман</div>
+            <div class="book-year">1929</div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover"><img src="liudyna.jpg" alt="Людина і зброя"></div>
+            <div class="book-title">Людина і зброя</div>
+            <div class="book-author">Олесь Гончар</div>
+            <div class="book-genre">Роман</div>
+            <div class="book-year">1964</div>
+        </div>
+    </div>
+
+</body>
+</html>
