@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWorld – Головна сторінка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        /* ===== МЕНЮ ===== */
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            background-color: #4CAF50;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .menu li a:hover { background-color: #397d3a; }
+        .menu li a.active { background-color: #2e8b57; }
+
+        /* ===== ЗАГОЛОВОК САЙТУ ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        .site-title {
+            margin: 0;
+            color: #2e8b57;
+            font-style: italic;
+            text-shadow: 1px 1px 2px #aaa;
+        }
+        .theme-btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .theme-btn:hover { background-color: #397d3a; }
+
+        /* ===== ТАБЛИЦЯ ===== */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .info-table th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .info-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .info-table tr:hover { background-color: #f1f8f4; }
+
+        /* ===== ЦИТАТА + ПАЗЛ ===== */
+        .quote-puzzle-wrapper {
+            display: flex;
+            align-items: flex-start; 
+            margin: 20px 0;
+            gap: 400px; /* відстань між цитатою і пазлом */
+        }
+
+        /* Заголовок цитати - точні стилі як у першому коді */
+        .quote-header {
+            margin: 20px 0 10px 0;
+        }
+
+        /* Банер з цитатою */
+        .quote-banner {
+            position: relative;
+            max-width: 350px;
+        }
+        .quote-banner img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        }
+        .quote-text {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background-color: rgba(0, 0, 0, 0.55);
+            color: #fff; /* білий текст цитати */
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Пазл */
+        .puzzle-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #puzzle-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 4px;
+            width: 250px;  
+            height: 250px;
+        }
+        .puzzle-piece {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* ===== ВІДЕО ===== */
+        iframe {
+            margin-top: 25px;
+            border-radius: 8px;
+        }
+
+        /* ===== ТЕМНА ТЕМА ===== */
+        body.dark-theme {
+            background-color: #1e1e1e;
+            color: #eaeaea;
+        }
+        body.dark-theme .menu { background-color: #2f5f3a; }
+        body.dark-theme .menu li a.active { background-color: #1f4f33; }
+        body.dark-theme .info-table { background-color: #2a2a2a; }
+        body.dark-theme .info-table th { background-color: #1f4f33; }
+        body.dark-theme .info-table td { border-bottom: 1px solid #444; }
+        body.dark-theme .info-table tr:hover { background-color: #333; }
+        body.dark-theme .quote-text { color: #a6e3c1; }
+        body.dark-theme button,
+        body.dark-theme .theme-btn { background-color: #3a7a4a; }
+        body.dark-theme button:hover,
+        body.dark-theme .theme-btn:hover { background-color: #2f5f3a; }
+    </style>
+</head>
+<body>
+
+<!-- МЕНЮ -->
+<ul class="menu">
+    <li><a href="index.html" class="active">Головна</a></li>
+    <li><a href="catalog.html">Каталог книг</a></li>
+    <li><a href="authors.html">Автори</a></li>
+    <li><a href="genres.html">Жанри</a></li>
+    <li><a href="reviews.html">Рецензії</a></li>
+    <li><a href="about.html">Про сайт</a></li>
+    <li><a href="contacts.html">Контакти</a></li>
+</ul>
+
+<!-- ЗАГОЛОВОК САЙТУ -->
+<div class="header">
+    <h1 class="site-title">BookWorld – сайт про книги</h1>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeButton">
+        Темна тема
+    </button>
+</div>
+
+<p>
+    Ласкаво просимо на сайт для справжніх поціновувачів літератури.
+    Тут ви знайдете книги, авторів, жанри та цікаві міні-ігри.
+</p>
+
+<!-- ТАБЛИЦЯ -->
+<table class="info-table">
+    <tr>
+        <th>Розділ</th>
+        <th>Опис</th>
+        <th>Кількість</th>
+    </tr>
+    <tr>
+        <td>Каталог книг</td>
+        <td>Перелік доступних книг</td>
+        <td>120</td>
+    </tr>
+    <tr>
+        <td>Автори</td>
+        <td>Інформація про письменників</td>
+        <td>35</td>
+    </tr>
+    <tr>
+        <td>Жанри</td>
+        <td>Літературні напрями</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Рецензії</td>
+        <td>Відгуки читачів</td>
+        <td>48</td>
+    </tr>
+</table>
+
+<!-- ЦИТАТА + ПАЗЛ -->
+<h2 class="quote-header">Цитата дня</h2>
+
+<div class="quote-puzzle-wrapper">
+
+    <!-- ЦИТАТА -->
+    <div class="quote-banner">
+        <img src="book.jpg" alt="Книга">
+        <div class="quote-text">
+            «Книга — це дзеркало, у якому відбивається душа читача»
+        </div>
+    </div>
+
+    <!-- ПАЗЛ -->
+    <div class="puzzle-wrapper">
+        <div id="puzzle-container">
+            <img src="image_part_001.jpg" class="puzzle-piece" data-pos="0">
+            <img src="image_part_002.jpg" class="puzzle-piece" data-pos="1">
+            <img src="image_part_003.jpg" class="puzzle-piece" data-pos="2">
+            <img src="image_part_004.jpg" class="puzzle-piece" data-pos="3">
+            <img src="image_part_005.jpg" class="puzzle-piece" data-pos="4">
+            <img src="image_part_006.jpg" class="puzzle-piece" data-pos="5">
+            <img src="image_part_007.jpg" class="puzzle-piece" data-pos="6">
+            <img src="image_part_008.jpg" class="puzzle-piece" data-pos="7">
+            <img src="image_part_009.jpg" class="puzzle-piece" data-pos="8">
+        </div>
+    </div>
+</div>
+
+<!-- ВІДЕО -->
+<h2>Відео</h2>
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/UsR08cY8k0A"
+        allowfullscreen>
+</iframe>
+
+<script>
+    /* ===== ТЕМА ===== */
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+        const btn = document.getElementById('themeButton');
+        btn.textContent = document.body.classList.contains('dark-theme') ? 'Світла тема' : 'Темна тема';
+    }
+
+    /* ===== ПАЗЛ 3x3 ===== */
+    let selectedPiece = null;
+
+    function shufflePuzzle() {
+        const container = document.getElementById("puzzle-container");
+        for (let i = container.children.length; i >= 0; i--) {
+            container.appendChild(container.children[Math.random() * i | 0]);
+        }
+    }
+
+    function checkPuzzle() {
+        const pieces = document.querySelectorAll(".puzzle-piece");
+        for (let i = 0; i < pieces.length; i++) {
+            if (parseInt(pieces[i].dataset.pos) !== i) return;
+        }
+        alert("🎉 Вітаю! Пазл складено правильно!");
+    }
+
+    function puzzleClick(event) {
+        if (!selectedPiece) {
+            selectedPiece = event.target;
+            selectedPiece.style.outline = "2px solid red";
+        } else {
+            const container = document.getElementById("puzzle-container");
+            const pieces = Array.from(container.children);
+            const index1 = pieces.indexOf(selectedPiece);
+            const index2 = pieces.indexOf(event.target);
+
+            if (index1 < index2) {
+                container.insertBefore(event.target, selectedPiece);
+                container.insertBefore(selectedPiece, pieces[index2 + 1] || null);
+            } else {
+                container.insertBefore(selectedPiece, event.target);
+                container.insertBefore(event.target, pieces[index1 + 1] || null);
+            }
+
+            selectedPiece.style.outline = "";
+            selectedPiece = null;
+
+            checkPuzzle();
+        }
+    }
+
+    window.addEventListener("load", () => {
+        shufflePuzzle();
+        document.querySelectorAll(".puzzle-piece")
+            .forEach(piece => piece.addEventListener("click", puzzleClick));
+    });
+</script>
+
+</body>
+</html>
